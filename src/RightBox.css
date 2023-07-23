@@ -1,0 +1,61 @@
+
+.title{
+    margin-bottom: 0px;
+    color: whitesmoke;
+}
+.person{
+    margin-top: 3px;
+    color: whitesmoke;
+    opacity: 0.7;
+}
+.lower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lower > button{
+    width: 8rem;
+    height: 2.5rem;
+    background-color:  hsl(172, 67%, 45%);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.tip_amount{
+    align-items: center;
+}
+
+.tip_amount .tip_values{
+    width: 6rem;
+    text-align: end;
+    font-size: 24px;
+    color: hsl(172, 67%, 45%);
+    height: 100%;
+    overflow: hidden;
+    padding-right: 4px;
+}
+.tip_values h2{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+.total{
+    align-items: center;
+}
+.total .total_values{
+    width: 6rem;
+    text-align: end;
+    font-size: 24px;
+    color:hsl(172, 67%, 45%);
+    height: 100%;
+    overflow: hidden;
+    padding-right: 4px;
+}
+.total_values h2{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}

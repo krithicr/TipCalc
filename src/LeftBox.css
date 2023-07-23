@@ -1,0 +1,145 @@
+.bill{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.bill > p{
+    margin-bottom: 5px;
+}
+.bill > input{
+    height: 2rem;
+    text-align: end;
+}
+
+.select_tip{
+    display: flex;
+    flex-direction: column;
+}
+.select_tip > p{
+    margin-bottom: 5px;
+}
+.tip_buttons{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tip_buttons > button{
+    flex: 30%;
+    height: 2.5rem;
+    font-size: 18px;
+    background-color: hsl(183, 100%, 15%);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: whitesmoke;
+}
+.tip_buttons > button:hover{
+    background-color: hsl(172, 67%, 45%);
+    color: black;
+}
+.tip_buttons > button:active, button:focus {
+    background-color: hsl(172, 67%, 45%);
+    color: black;
+  }
+  
+.custom_tip{
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+.custom_tip > input{
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    text-align: center;
+    background-color: hsl(189, 41%, 97%);
+}
+.custom_tip > input:placeholder-shown{
+    text-align: center;
+}
+.number_of_people{
+    display: flex;
+    flex-direction: column;
+}
+.number_of_people > p{
+    margin-bottom: 5px;
+}
+.number_of_people > input{
+    height: 2rem;
+    text-align: end;
+}
+
+.left_box input{
+    background-color: #eff5f7;
+    outline: none;
+    border: none;
+    font-size: 18px;
+}
+.left_box input:focus{
+    outline: 2px solid hsl(185, 41%, 84%); ;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.bill input{
+    padding-right: 10px;
+}
+.number_of_people input{
+    padding-right: 10px;
+}
+
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.tip_amount{
+    flex: 25%;
+    position: relative;
+   
+}
+[name ="tip"]{
+    opacity: 0;
+    position: absolute;
+    inset: 0;
+    cursor: pointer;
+}
+
+.tip_btn{
+    background-color: hsl(183, 100%, 15%);
+    color: whitesmoke;
+    width: 100%;
+    height: 2rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    /* padding-top: 5px; */
+}
+
+.tip_btn_selected{
+    background-color: hsl(172, 67%, 45%);
+    color: black;
+}
+
+
+
+
+  .tip_btn > input{
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  } 
