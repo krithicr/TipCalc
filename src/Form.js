@@ -3,23 +3,27 @@ import React from "react";
 const Form = ({
   handleBillAmt,
   setPeople,
+  setPeopleRef,
   tipSelected,
   setTipSelected,
   billAmtRef,
   handleCustom,
   customTipRef,
   customTip,
+  setBillAmt,
+  formRef,
+  billAmt,
 }) => {
   return (
     <div className="left_box">
-      <form className="form">
+      <form ref={formRef} className="form">
         <div className="bill">
           <p>Bill</p>
           <span className="dollar"></span>
           <input
             type="number"
             ref={billAmtRef}
-            onChange={handleBillAmt}
+            onChange={(e) => setBillAmt(e.target.value)}
             autoComplete="off"
             placeholder="0"
           />
@@ -103,14 +107,12 @@ const Form = ({
               <div
                 className={customTip ? "tip_btn tip_btn_selected" : "tip_btn"}
               >
-                {/* <div className="custom_tip"> */}
                 <input
                   type="number"
                   ref={customTipRef}
                   onChange={handleCustom}
                   placeholder="Custom"
                 />
-                {/* </div> */}
               </div>
             </div>
           </div>
@@ -121,7 +123,7 @@ const Form = ({
 
           <input
             type="number"
-            // ref={setPeopleRef}
+            ref={setPeopleRef}
             onChange={(e) => setPeople(e.target.value)}
             autoComplete="off"
             placeholder="0"

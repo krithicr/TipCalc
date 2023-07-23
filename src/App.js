@@ -17,6 +17,8 @@ function App() {
   const [tipPerPerson, setTipPerPerson] = useState();
   const [totalPerPerson, setTotalPerPerson] = useState();
 
+  const formRef = useRef();
+
   useEffect(() => {
     if (tipSelected === null) {
       const total = (billAmt * customTip) / 100;
@@ -41,10 +43,10 @@ function App() {
 
   // console.log(tipSelected);
 
-  function handleBillAmt() {
-    const bill = billAmtRef.current.value;
-    setBillAmt(bill);
-  }
+  // function handleBillAmt() {
+  //   const bill = billAmtRef.current.value;
+  //   setBillAmt(bill);
+  // }
 
   function handleCustom() {
     const custom = customTipRef.current.value;
@@ -53,7 +55,16 @@ function App() {
   }
 
   function handleReset() {
-    window.location.reload();
+    billAmtRef.current.value = "";
+    setBillAmt(0);
+
+    setPeopleRef.current.value = "";
+    setPeople(0);
+
+    customTipRef.current.value = "";
+    setCustomTip(0);
+
+    setTipSelected(10);
   }
 
   return (
@@ -61,12 +72,13 @@ function App() {
       <div className="container">
         <Form
           billAmt={billAmt}
+          formRef={formRef}
+          setBillAmt={setBillAmt}
           tipSelected={tipSelected}
           setPeople={setPeople}
           setPeopleRef={setPeopleRef}
           billAmtRef={billAmtRef}
           setTipSelected={setTipSelected}
-          handleBillAmt={handleBillAmt}
           setCustomTip={setCustomTip}
           handleCustom={handleCustom}
           customTipRef={customTipRef}

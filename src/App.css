@@ -36,10 +36,10 @@ body{
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
-  padding: 20px;
+  padding: 18px;
   background-color: hsl(183, 100%, 15%);
   border-radius: 10px;
-  /* overflow: hidden; */
+  
 }
 .tip_amount{
   display: flex;
